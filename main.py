@@ -1,7 +1,7 @@
 import socket
 import threading
 import tkinter as tk
-from tkinter import scrolledtext, messagebox, StringVar
+from tkinter import scrolledtext
 from tkinter import Menu, ttk
 import os
 import sys
@@ -257,7 +257,7 @@ class DMC:
             self.reconnect_attempts += 1
             self.root.after(self.reconnect_delay * 1000, self.start_connection)
         else:
-            self.add_message("Eror: Connection lost.")
+            self.add_message("Error: Connection lost.")
             self.reconnect_attempts = 0 
 
     def add_message(self, message):
