@@ -638,8 +638,8 @@ if __name__ == "__main__":
     try:
         s, p = [l.split('=')[1].strip() for l in open(f)]
     except FileNotFoundError:
-        open(f, 'w').write("server=147.185.221.19\nport=42439\n")
-        s, p = '147.185.221.19', '42439'
+        open(f, 'w').write("server=dmconnect.hoho.ws\nport=42439\n")
+        s, p = 'dmconnect.hoho.ws', '42439'
 
     root = tk.Tk()
     app = DMC(root, s, int(p))
